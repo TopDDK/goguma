@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-1.12.1.js"></script>
+    <script src="js/mobile.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>모바일사이트</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <nav id="gnb">
+            <ul>
+                <li>
+                    <a href="#">회사소개</a>
+                    <ul class="depth2">
+                        <li>
+                            <a href="#">연혁</a>
+                        </li>
+                        <li>
+                            <a href="#">대표</a>
+                        </li>
+                        <li>
+                            <a href="#">소개</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">공연 / 기획</a>
+                    <ul class="depth2">
+                        <li>
+                            <a href="#">공연일정</a>
+                        </li>
+                        <li>
+                            <a href="#">기획물</a>
+                        </li>
+                        <li>
+                            <a href="#">영화</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">음반</a>
+                    <ul class="depth2">
+                        <li>
+                            <a href="#">기획음반</a>
+                        </li>
+                        <li>
+                            <a href="#">기획중인음반</a>
+                        </li>
+                        <li>
+                            <a href="#">음반판매율</a>
+                        </li>                                
+                    </ul>
+                </li>                        
+            </ul>
+        </nav>
+        <header>
+            <div id="headerIn">
+                <!-- 오픈메뉴버튼 -->
+                <div class="navi">
+                    <a href="#">
+                        <span class="fas fa-bars"></span>
+                    </a>
+                </div>
+                <!-- 로고 -->
+                <h1 class="logo">
+                    <a href="#"><img src="images/Logo.png" alt=""></a>
+                </h1>
+                <!-- 서치 -->
+                <div class="search">
+                    <a href="#">
+                        <span class="fas fa-search"></span>
+                    </a>
+                </div>
+
+
+            </div>
+            
+            <div id="SearchBar">
+                <input type="search" name="sch" id="sch" placeholder="검색란...">
+            </div>
+        </header>
+
+        <main>
+            <div id="mainVisual">
+                <a href="#"></a>
+            </div>
+
+            <div id="gall1">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="images/concert.jpg" alt="">
+                            <p class="conts">
+                                <span class="tit">Concert</span>
+                                <span class="exp">일시 : 2018.03.12~2018.03.31</span>
+                                <span class="exp">장소 : 문화체육관</span>
+                            </p>
+                        </a>
+                        <p class="btn">
+                            <span class="good">♥</span>
+                            <span class="recm" id="clickme1">추천: 0</span>
+                        </p>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="images/profile.jpg" alt="">
+                            <p class="conts">
+                                <span class="tit">Profile</span>
+                                <span class="exp">개성이 있는 맵버들을 만나보다.</span>
+                            </p>
+                        </a>
+                        <p class="btn">
+                            <span class="good">♥</span>
+                            <span class="recm" id="clickme2">추천: 0</span>
+                        </p>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img class="mySlides" src="images/Record1.png" alt="">
+                            <img class="mySlides" src="images/Record2.png" alt="">
+                            <img class="mySlides" src="images/Record3.png" alt="">
+                            <img class="mySlides" src="images/Record4.png" alt="">
+                            <p class="conts">
+                                <span class="tit">NEW Record</span>
+                                <span class="exp">새로 나온 인기 음원을 찾아보아요.</span>
+                            </p>
+                        </a>
+                        <p class="btn">
+                            <span class="good">♥</span>
+                            <span class="recm" id="clickme3">추천: 0</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="choice">
+                <select class="selbox" onchange="setSelectText('searchSubCate',this)">
+                    <option value="show1">TIME V</option>
+                    <option value="show2">X-MEN</option>
+                    <option value="show3">YORK</option>
+                    <option value="show4">GRAVITY</option>
+                    <option value="show5">IRONMAN</option>
+                </select>
+                <div class="showpic">
+                    <div id="show1" class="mm">
+                        <img src="images/time.jpg" alt="">
+                        <p class="choice_text1">TIME V</p>
+                    </div>
+                    <div id="show2" class="mm">
+                        <img src="images/x_men.jpg" alt="">
+                        <p class="choice_text2">X-MEN</p>
+                    </div>
+                    <div id="show3" class="mm">
+                        <img src="images/york.jpg" alt="">
+                        <p class="choice_text3">NEWYORK</p>
+                    </div>
+                    <div id="show4" class="mm">
+                        <img src="images/gravity.jpg" alt="">
+                        <p class="choice_text4">GRAVITY</p>
+                    </div>
+                    <div id="show5" class="mm">
+                        <img src="images/ironman.jpg" alt="">
+                        <p class="choice_text5">IRONMAN</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sumImg">
+                <div class="sum1">                 
+                    <img src="images/e5a3dabde14fdaf1caea2b6d4e1bf23a.jpg" alt="">
+                    <p class="exp_1">
+                        <span class="title">
+                            새로운 소식
+                        </span>
+                        <span class="sum1_exp1">
+                            아키하바라에서 무슨 일이? 자랑처럼 토끼, 나는 있습니다. 된 별 다 자랑처럼 피어나듯이 하나에 봅니다. 파란 별 옥 말 묻힌 남은 아름다운 계십니다.
+                        </span>
+                    </p>
+                </div>
+                <div class="sum2">
+                    <img src="images/i15441708527.jpg" alt="">
+                    <p class="exp_2">
+                        <span class="title">
+                            MUSIC
+                        </span>
+                        <span class="sum1_exp2">
+                            BGM을 찾아보아요. 별 가슴속에 다하지 벌써 별을 봄이 위에 까닭입니다. 추억과 이름과, 별 계십니다. 별 이름자 그리워 가을로 까닭입니다.
+                        </span>
+                    </p>
+                </div>
+                <div class="sum3">
+                    <img src="images/i1621541005.jpg" alt="">
+                    <p class="exp_3">
+                        <span class="title">
+                            신인공개오디션
+                        </span>
+                        <span class="sum1_exp3">
+                            참신하고 개성이 넘치는...<br>
+                            풀이 나는 별이 그리고 덮어 나의 잔디가 다 거외다. 벌써 덮어 가득 것은 이웃 어머님, 이제 듯합니다.
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+        </main>
+
+        <footer>
+            <nav id="fnav">
+                <ul>
+                    <li>
+                        <a href="#">ADDRESS</a>
+                        <ul class="fdepth2">
+                            <li>
+                                <address>
+                                    울산광역시
+                                    <br> 남구 삼산동 삼산타워 10층
+                                    <br> 그린컴퓨터아카데미                                    
+                                </address>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">저작권</a>
+                        <ul class="fdepth2">
+                            <li>
+                                <span class="knum">
+                                    사업자등록번호 : 001-01-00001
+                                </span><br>
+                                <span class="cpy">
+                                    ⓒ Copyright GreenArt 2018. All rights reserved.
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="flogo">
+                <a href="#"><img src="images/Logo.png" alt=""></a>
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+
+/* search아이콘을 클릭하였을때 searchbar가 슬라이드 되면서 나왔다 들어가고
+만약에 메인메뉴가 나와있으면 메인메뉴는 닫히고searchbar가 나오도록 하는 script */
+    $(".search>a").click(function () {
+        $("#SearchBar").slideToggle("500", "easeOutBounce");
+        $("#gnb").animate({ left: "-100%" });
+    });
+
+/* navi메뉴아이콘을 클릭하였을때 메인메뉴가 나오고
+만일에 search바다 나와 있을때 search바가 닫히면서 메인메뉴가 나오게 하는 script */
+    $(".navi>a").click(function () {
+        var poi = $("#gnb").css("display");
+        var sch = $("#SearchBar").css("display");
+        if (poi == "none") {            
+            $("#gnb").show(100).animate({ left: "0" });            
+        } else  if(poi == "block"){
+            $("#SearchBar").slideUp();
+            $("#gnb").animate({ left: "-100%" });
+            $("#gnb").fadeOut(200);
+            $(".depth2").slideUp();                        
+        };
+        if (sch == "block") {
+            $("#SearchBar").slideUp();
+            $("#gnb").show(100).animate({ left: "0" });            
+        };
+        return false;
+    });
+
+/* 메인메뉴를 클릭하였을때 depth2가 나오고 다른 depth2를 클릭하였을때
+열려있는 depth2가 닫히고 클릭한 메뉴의 depth2가 나타난다.  */
+    $("#gnb>ul>li>a").click(function () {
+        var dis = $(this).siblings(".depth2");
+        var two = dis.css("display");
+
+        if (two == "none") {
+            $(".depth2").slideUp();
+            dis.slideDown(); // dis => display:block;
+            $("#gnb>ul>li>a").removeClass("onn");
+            $(this).addClass("onn");
+        } else if (two == "block") {
+            dis.slideUp();
+            $(this).removeClass("onn");
+        };
+        return false;
+    });
+    /* 좋아요 버튼 */
+    $(".btn>span.good").click(function () {
+        $(this).toggleClass("red");
+        return false;
+    });
+
+
+    /* 추천 */
+    /* html문서 내부중 clickme라는 아이디명을 찾아 bttn이라는 변수안에 넣어 준다. */
+    $(".selbox").change(function () {
+        $(".mm").hide(); // 현재 선택한 옵션 메뉴를 제외하고 다른 나머지 메뉴는 사라진다.
+        $("#" + $(this).val()).show();
+        /* 
+        내가 선택한 옵션메뉴에 관련되는 value의 값과 일치하는 아이디 명을 가지고 있는
+        메뉴만 나타내도록 해주는 구성 
+        */
+    });
+    var count = 0;
+    $("#clickme1").click(function () {
+        count += 1;
+        $("#clickme1").html("추천: " + count);
+        return false;
+    });
+    var count2 = 0;
+    $("#clickme2").click(function () {
+        count2 += 1;
+        $("#clickme2").html("추천: " + count2);
+        return false;
+    });
+    var count3 = 0;
+    $("#clickme3").click(function () {
+        count3 += 1;
+        $("#clickme3").html("추천: " + count3);
+        return false;
+    });
+
+
+//footer 메뉴를 클릭하였을때 하단 메뉴가 나오고 들어가는 jquery
+    $("#fnav>ul>li>a").click(function () {
+        var dis = $(this).siblings(".fdepth2");
+        var two = dis.css("display");
+
+        if (two == "none") {
+            $(".fdepth2").slideUp();
+            dis.slideDown(); // dis => display:block;
+            $("#fnav>ul>li>a").removeClass("on");
+            $(this).addClass("on");
+        } else if (two == "block") {
+            dis.slideUp();
+            $(this).removeClass("on");
+        }
+        return false;
+    });
+
+    $("#gall1 a").click(function(){
+        $(this).find(".conts").slideToggle();
+        return false;
+    });
+
+//2초간격의 시간으로 다음이미지로 반복재생되는 slider
+    var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }   
+    
+</script>
+
+</html>
